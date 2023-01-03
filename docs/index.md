@@ -1,5 +1,6 @@
 
 
+* <code>Jan 02, 2023</code> [Writing Package Unit Tests In Go](2023-01-02T18-49-38-writing-package-unit-tests-in-go.md)
 * <code>Jan 02, 2023</code> [JSON Configuration In Go](2023-01-02T18-27-22-json-configuration-in-go.md)
 * <code>Jan 02, 2023</code> [Writing A Link Shortening Micro Service](2023-01-02T14-28-08-writing-a-link-shortening-micro-service.md)
 
@@ -10,4 +11,4 @@
 * <code>Dec 03, 2022</code> [Setting Up A TIL Repo](2022-12-03T02-07-49-setting-up-a-til-repo.md)
 
 
-<sup><sub>generated 2 Jan 2023 18:27:48 by <a href='https://github.com/senorprogrammer/til'>til</a></sub></sup>
+<sup><sub>generated 3 Jan 2023 09:37:50 by <a href='https://github.com/senorprogrammer/til'>til</a></sub></sup>
