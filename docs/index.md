@@ -1,4 +1,6 @@
 
+* <code>Jan 08, 2023</code> [Go Test Cache](docs/2023-01-08T14-21-00-go-test-cache.md)
+
 * <code>Jan 04, 2023</code> [N + 1: SQLAlchemy Queries](2023-01-04T11-21-32-n-and-1-queries.md)
 
 * <code>Jan 03, 2023</code> [Redis + Go: Connection + CRUD](2023-01-03T15-42-31-redis-and-go-connection-and-crud.md)
