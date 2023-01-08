@@ -1,4 +1,6 @@
 
+* <code>Jan 08, 2023</code> [Go Env Var Default Value](docs/2023-01-08T14-26-04-go-env-var-default-value.md)
+
 * <code>Jan 08, 2023</code> [Go Test Cache](docs/2023-01-08T14-21-00-go-test-cache.md)
 
 * <code>Jan 04, 2023</code> [N + 1: SQLAlchemy Queries](2023-01-04T11-21-32-n-and-1-queries.md)
