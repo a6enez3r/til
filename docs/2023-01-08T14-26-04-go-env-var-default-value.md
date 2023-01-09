@@ -11,7 +11,7 @@ The `os.Getenv` function provided by `Go` doesn't support specifying a fallback 
 
 You could define a custom function that combines `os.LookupEnv` with the fallback option
 
-```
+```go
     func getEnv(key, fallback string) string {
         value, exists := os.LookupEnv(key)
         if !exists {
@@ -23,7 +23,7 @@ You could define a custom function that combines `os.LookupEnv` with the fallbac
 
 once you have this function you can use it in your code
 
-```
+```go
     db, err := New(
 		getEnv("REDIS_HOST", "localhost"),
 		getEnv("REDIS_PORT", "6399"),

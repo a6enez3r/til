@@ -1,6 +1,6 @@
 ---
 date: 2023-01-09T02:40:26-05:00
-title: Git: Create Private Fork
+title: Git Create Private Fork
 tags: 
 ---
 

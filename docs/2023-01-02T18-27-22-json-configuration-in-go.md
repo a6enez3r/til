@@ -9,7 +9,7 @@ tags:
 
 If you want to specify configuration options in one central place you will most probably use a configuration file. For example something that looks like :-
 
-```
+```json
 {
  "server": {
    "port": "8080"
@@ -26,7 +26,7 @@ If you want to specify configuration options in one central place you will most 
 
 Once you have a configuration file in mind you can write a parser package as follows :-
 
-```
+```go
 package parser
 
 import (

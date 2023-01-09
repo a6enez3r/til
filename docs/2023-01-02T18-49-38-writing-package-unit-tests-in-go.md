@@ -9,7 +9,7 @@ tags:
 
 Given a tiny package like `config`, that parses a JSON configuration file
 
-```
+```go
 package config
 
 import (
@@ -51,7 +51,7 @@ we can test it as follows.
 
 - to test invalid file paths return a null configuration object and an error we can
 
-```
+```go
 func TestFromFileInvalidPath(t *testing.T) {
 	contents, err := FromFile("/tmp/invalid.json")
 	if err == nil && contents != nil{
@@ -64,7 +64,7 @@ However, if we want to test valid file paths return the opposite we have to set 
 
 - creating a mock configuration generator function
 
-```
+```go
 package config
 
 import (
@@ -103,7 +103,7 @@ func MockConfig(path string) {
 
 - we can then test valid configuration file paths don't return an error
 
-```
+```go
 func TestFromFileValidPath(t *testing.T) {
 	MockConfig("/tmp/valid.json")
 	contents, err := FromFile("/tmp/valid.json")

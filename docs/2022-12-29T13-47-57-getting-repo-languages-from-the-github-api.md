@@ -10,7 +10,7 @@ tags:
 Can easily automate getting a summary of your personal projects on GitHub using the GitHub API.
 
 - To get all your repos
-```
+```python
     gcli = Github(pat)
     try:
         github_repos = list(gcli.get_user().get_repos() )
@@ -18,7 +18,7 @@ Can easily automate getting a summary of your personal projects on GitHub using 
         github_repos = []
 ```
 - You can focus on a specifc type of repo (for instance if you want to show data only for public projects)
-```
+```python
     filtered_github_repos = []
     for repo in github_repos:
         if (
@@ -30,7 +30,7 @@ Can easily automate getting a summary of your personal projects on GitHub using 
             filtered_github_repos.append(repo)
 ```
 - For some weird reason the languages for a repo aren't included in the original API call so you have to make a separate call
-```
+```python
     headers = {"Authorization": f"token {pat}"}
     resp = requests.get(repo.languages_url, headers=headers)
     languages = []

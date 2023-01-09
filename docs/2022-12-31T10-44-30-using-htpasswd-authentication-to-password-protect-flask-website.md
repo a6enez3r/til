@@ -9,13 +9,13 @@ tags:
 
 - install `htpasswd` tool
 
-```
+```bash
     npm install -g htpasswd
 ```
 
 - generate auth file
 
-```
+```bash
     htpasswd -c /path/to/.htpasswd username
 ```
 
@@ -23,13 +23,13 @@ tags:
 
 - you can update or reset the password using
 
-```
+```bash
     htpasswd /path/to/.htpasswd username
 ```
 
 - once you have the auth file setup, configure your Flask application
 
-```
+```python
 import flask
 from flask_htpasswd import HtPasswdAuth
 

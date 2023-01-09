@@ -1,7 +1,7 @@
 ---
 layout: default
 date: 2023-01-03T15:42:31-05:00
-title: Redis + Go: Connection + CRUD
+title: Redis + Go Connection + CRUD
 tags: 
 ---
 
@@ -12,7 +12,7 @@ In order to perform database I/O efficiently we can use a connection pool.
 
 - you can instantiate a new connection pool with something like
 
-```
+```go
 type redis struct{ pool *redisClient.Pool }
 
 func New(host, port, password string) (storage.Service, error) {
@@ -34,7 +34,7 @@ Once we have a `Redis` connection instance we can define various CRUD operations
 
 - a `Close` method to terminate connections
 
-```
+```go
 ...
 // Close : close a connection instance
 func (r *redis) Close() error {
@@ -44,7 +44,7 @@ func (r *redis) Close() error {
 
 - a `IsAvailable` method to check connection status
 
-```
+```go
 func (r *redis) IsAvailable() bool {
 	conn := r.pool.Get()
 	_, err := conn.Do("PING")
@@ -57,7 +57,7 @@ func (r *redis) IsAvailable() bool {
 
 - a `Exists` method to check key availability
 
-```
+```go
 func (r *redis) Exists(id uint64) bool {
 	conn := r.pool.Get()
 	defer conn.Close()
@@ -74,7 +74,7 @@ func (r *redis) Exists(id uint64) bool {
 
 - a `Save` method to save a key to Redis with expiration
 
-```
+```go
 func (r *redis) Save(url string, expires time.Time) (string, error) {
 	conn := r.pool.Get()
 	defer conn.Close()
@@ -106,7 +106,7 @@ func (r *redis) Save(url string, expires time.Time) (string, error) {
 
 - a `Load` method to get an encoded key from Redis
 
-```
+```go
 func (r *redis) Load(code string) (string, error) {
 	conn := r.pool.Get()
 	defer conn.Close()

@@ -9,7 +9,7 @@ tags:
 
 - given a super vanilla `nginx` config like the one below
 
-```
+```json
 server {
   listen        80;
   server_name   abenezer.sh www.abenezer.sh abmamo.com www.abmamo.com;
@@ -23,7 +23,7 @@ you can use certbot to redirect all inbound connections to be redirected to HTTP
 
 - generate certificate using `certbot`
 
-```
+```bash
     sudo certbot -d abenezer.sh -d www.abenezer.sh -d abmamo.com -d www.abmamo.com
 ```
 
@@ -31,7 +31,7 @@ you can use certbot to redirect all inbound connections to be redirected to HTTP
 
 - the above will generate an `nginx` config that looks something like
 
-```
+```json
 server {
   server_name   abenezer.sh www.abenezer.sh abmamo.com www.abmamo.com;
   location / {

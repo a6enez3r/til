@@ -11,13 +11,13 @@ When using `Chrome` + `Selenium` need to have compatible browser & driver versio
 
 - install web driver manager
 
-```
+```bash
     python3 -m pip install webdriver-manager
 ```
 
 - import driver manager and configure webdriver with it
 
-```
+```python
 ...
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager

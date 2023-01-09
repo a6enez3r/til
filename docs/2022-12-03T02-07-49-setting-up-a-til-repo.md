@@ -13,13 +13,13 @@ To set up a local `TIL` repo
 
 - clone `TIL` generator
 
-```
+```bash
     git clone https://github.com/senorprogrammer/til.git
 ```
 
 - build the `CLI`
 
-```
+```bash
     make
 ```
 
@@ -27,14 +27,14 @@ To set up a local `TIL` repo
 
 - add it as an alias
 
-```
+```bash
 code  ~/.zshrc
 alias til="/Users/abenezer/Code/tools/til/bin/til"
 ```
 
 - create a `TIL` repo
 
-```
+```bash
 mkdir -p /path/to/til
 cd /path/to/til
 git init
@@ -42,7 +42,7 @@ git init
 
 - run `til --help` to generate a config file (by default @ `~/.config/til/config.yml`)
 
-```
+```yaml
 commitMessage: "build, save, push"
 committerEmail: "hi@abenezer.sh"
 committerName: "Abenezer Mamo"
